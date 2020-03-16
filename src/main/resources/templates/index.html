@@ -8,7 +8,15 @@
 
 </head>
 <body>
+
 <h1>Pick a planet:</h1>
+
+<ol>
+    <li th:each="planet : ${planets}"
+        th:value="${planet}"
+        th:text="${planet.name}"
+    >Planets</li>
+</ol>
 
 </body>
 </html>
