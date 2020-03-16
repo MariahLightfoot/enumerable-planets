@@ -11,12 +11,23 @@
 
 <h1>Pick a planet:</h1>
 
-<ol>
-    <li th:each="planet : ${planets}"
-        th:value="${planet}"
-        th:text="${planet.name}"
-    >Planets</li>
-</ol>
+<table>
+
+    <thead>
+    <tr>
+        <th>Planet Name</th>
+        <th>Planet Year Length</th>
+    </tr>
+    </thead>
+
+    <tr th:each="planet : ${planets}"
+        th:value="${planet}">
+
+        <td th:text="${planet.name}">Planet Name</td>
+        <td th:text="${planet.yearLength}">Planet Year Length</td>
+    </tr>
+
+</table>
 
 </body>
 </html>
